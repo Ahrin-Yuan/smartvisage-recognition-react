@@ -1,0 +1,52 @@
+:root{
+  --neon-blue:#21ebff;
+  --blue-border:#3c67e3;
+  --blue-shadow: #5ddcff;
+  --gradient-blue-shadow2:linear-gradient(360deg, #4fafe6, #4e00c2);
+  --blue-shadow2:#4e00c2;
+  --white:#ffffff;
+  --lightBlue-border:#4fafe6;
+  --blue-scifi:#00fffd;
+  --dark-blue:#2A3056;
+}
+
+.form{
+    width: 700px;
+    /*border: 2px solid var(--white);
+    border-radius: 30px;*/
+    box-shadow:0 -0.2rem 1.5rem -0.2rem var(--neon-blue);
+}
+.form:hover{
+  box-shadow:0 0.5rem 2rem 0.5rem var(--neon-blue);
+  transition: background 0.1s, box-shadow 0.3s;
+}
+
+.input-field{
+    border: 2px solid var(--blue-shadow);
+    background-color: transparent;
+    color: var(--white);
+}
+.input-field:hover{
+  border: 2px solid var(--lightBlue-border);
+  box-shadow: 0px 0px 6px 1px var(--blue-scifi);
+}
+.input-field[type="text"]::placeholder {
+  color: #abb0cf;
+}
+.input-field[type="text"]:focus { /*change input border when input is selected*/
+  outline: 2px solid var(--blue-scifi); /* Removes the default browser focus outline */
+  outline-offset: -2px;
+}
+
+.btnDetect{
+    color: var(--white);
+    border: 2px solid var(--blue-shadow);
+    background-color: var(--gradient-blue-shadow2);
+}
+.btnDetect:hover{
+  color: var(--dark-blue);
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0px 0px 3px 1px var(--blue-scifi);
+  background-color: var(--blue-scifi);
+  transition: background 0.1s, box-shadow 0.3s, color 0.1s;
+}

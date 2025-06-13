@@ -1,0 +1,18 @@
+:root{
+  --neon-blue:#21ebff;
+  --blue-border:#3c67e3;
+  --blue-shadow: #5ddcff;
+  --gradient-blue-shadow2:linear-gradient(360deg, #4fafe6, #4e00c2);
+  --blue-shadow2:#4e00c2;
+  --white:#ffffff;
+  --lightBlue-border:#4fafe6;
+  --blue-scifi:#00fffd;
+  --dark-blue:#2A3056;
+}
+
+
+.reg-ClickLine:hover{
+  color: var(--white);
+  text-shadow: 1px 0px 30px var(--blue-scifi);
+  transition: text-shadow 0.1s, color 0.1s;
+}
