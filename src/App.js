@@ -45,7 +45,10 @@ loadUser = (data) => {
 calculateFaceLocation = (data) => {
   //bounding box is percentage of image
   //const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
-  const { top_row, left_col, right_col, bottom_row } = data;
+  const top_row = Number(data.topRow);
+  const left_col = Number(data.leftCol);
+  const right_col = Number(data.rightCol);
+  const bottom_row = Number(data.bottomRow);
   //DOM Manipulation
   const image = document.getElementById('inputimage');
   const width = Number(image.width);
@@ -79,6 +82,7 @@ calculateFaceLocation = (data) => {
       .then(response => response.json())
       .then(response => {
         if (response) {
+          console.log("Clarifai Box Response:", response);
           this.displayFaceBox(this.calculateFaceLocation(response));
           fetch('https://smartvisage-recognition-api.onrender.com/image', {
             method: 'put',
