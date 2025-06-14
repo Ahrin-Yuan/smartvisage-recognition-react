@@ -10,7 +10,6 @@ import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 
 
-
 const initialState = {
     input:'',
     imageUrl: '',
@@ -90,12 +89,16 @@ calculateFaceLocation = (data) => {
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
-            .catch(console.log)
+            .catch((err) => {
+              console.log("Error incrementing Entries:", err);
+            });
 
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
       })
-      .catch(err => console.log(err));
+      .catch((err) => {
+        console.log("Error fetching data from Clarifai API:", err);
+      });
   }
 
 
