@@ -44,16 +44,17 @@ loadUser = (data) => {
 
 calculateFaceLocation = (data) => {
   //bounding box is percentage of image
-  const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+  //const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+  const { top_row, left_col, right_col, bottom_row } = data;
   //DOM Manipulation
   const image = document.getElementById('inputimage');
   const width = Number(image.width);
   const height = Number(image.height);
   return {
-    leftCol: clarifaiFace.left_col * width,
-    topRow: clarifaiFace.top_row * height,
-    rightCol: width - (clarifaiFace.right_col * width),
-    bottomRow: height - (clarifaiFace.bottom_row * height)
+    leftCol: left_col * width,
+    topRow: top_row * height,
+    rightCol: width - right_col * width,
+    bottomRow: height - bottom_row * height,
   };
 } 
 
@@ -78,6 +79,7 @@ calculateFaceLocation = (data) => {
       .then(response => response.json())
       .then(response => {
         if (response) {
+          this.displayFaceBox(this.calculateFaceLocation(response));
           fetch('https://smartvisage-recognition-api.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
@@ -94,12 +96,12 @@ calculateFaceLocation = (data) => {
             });
 
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
+      //this.displayFaceBox(this.calculateFaceLocation(response))
       })
       .catch((err) => {
         console.log("Error fetching data from Clarifai API:", err);
       });
-  }
+  };
 
 
 
