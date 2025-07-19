@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 📸 SmartVisage Recognition App — Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Live App**: [SmartVisage Frontend on Render](https://smartvisage-recognition-react.onrender.com/) 
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📝 Description
 
-### `npm start`
+**Short version**:  
+Face detection app using the **Clarifai machine learning API**, with a **React.js frontend** and **Node.js/Express backend**, connected to a **PostgreSQL database**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Full version**:  
+SmartVisage is a full-stack face recognition web application that allows users to register, sign in, and submit images to detect human faces using the Clarifai API.  
+The frontend is built using **Create React App (CRA)**, styled with **Tachyons**, and connects to a RESTful backend built with **Node.js**, **Express**, and **PostgreSQL**.  
+The frontend is **deployed as a static site on Render**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 📝 Dependencies
+* OS windows 10+
+* Node v23.11.x
+* express v5.1.x
+* nodemon v3.1.x
+* pg v8.16.x
+* knex v3.1.x
+* cors v2.8.x
+* bcrypt-nodejs v0.0.x
+* clarifai-nodejs-grpc v11.5.x
+* react v19.1.0
+* react-parallax-tilt v1.7.x
+* tachyons v4.12.0
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 👣 How to Use
+Register a new account or sign in.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Paste an image URL containing a face into the input field.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Click the [ Detect ] button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app will display the image and highlight the detected face with a bounding box.
 
-### `npm run eject`
+The number of image submissions is updated per user.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📌 Deployment Notice (Free Render Tier)
+EXTRA SIDE NOTE — Render Hosting Disclaimer:
+This project is hosted on Render using the Free Tier, which means:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🔄 The site may spin down after periods of inactivity (cold start delay).
 
-## Learn More
+💡 TIP: Use cron-job.org to ping the site periodically and keep it awake.
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 👤 Author
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ahrin @ Irene
+- GitHub
+Contact: Open to collaboration and feedback!
