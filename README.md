@@ -17,7 +17,6 @@ The frontend is **deployed as a static site on Render**.
 ---
 
 ### 📝 Dependencies
-* OS windows 10+
 * Node v23.11.x
 * express v5.1.x
 * nodemon v3.1.x
@@ -50,13 +49,14 @@ The number of image submissions is updated per user.
 EXTRA SIDE NOTE — Render Hosting Disclaimer:
 This project is hosted on Render using the Free Tier, which means:
 
+```
 🔄 The site may spin down after periods of inactivity (cold start delay).
-
 💡 TIP: Use cron-job.org to ping the site periodically and keep it awake.
+```
 ---
 
 
-## 👤 Author
+## Author
 
 - Ahrin @ Irene
 - GitHub
