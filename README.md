@@ -45,13 +45,16 @@ The number of image submissions is updated per user.
 ---
 
 
-### 📌 Deployment Notice (Free Render Tier)
-EXTRA SIDE NOTE — Render Hosting Disclaimer:
-This project is hosted on Render using the Free Tier, which means:
+## 📌 Deployment Notice (Free Render Tier)
+**EXTRA SIDE NOTE — Render Hosting Disclaimer:**
+> This project is hosted on [Render](https://render.com) using the **Free Tier**, which means:
 
 ```
-🔄 The site may spin down after periods of inactivity (cold start delay).
-💡 TIP: Use cron-job.org to ping the site periodically and keep it awake.
+🔄 The site (especially the backend server) may **spin down after periods of inactivity**, causing a short delay (cold start) when it starts back up.
+
+🕒 You might experience a slight loading time **when signing in or registering**, especially if the server has been inactive for a while.
+
+💡 **TIP**: Use [cron-job.org](http://cron-job.org) to ping your backend endpoint regularly and prevent our project from spinning down due to inactivity.
 ```
 ---
 
